@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegradorMVVM.Views.InicioSesion"
+             Title="InicioSesion">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+
+
+            <Image Source="https://imgfz.com/i/UwYnG3r.png" HeightRequest="200" Margin="0,0,0,5"/>
+
+            <Label Text="Invernadero"
+              FontSize="50" 
+               TextColor="#2a4808"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,0,-10"/>
+
+
+            <Label Text="APP MÓVIL"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Margin="0,0,0,50"
+            />
+
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black">
+                <Grid>
+                    <Image Source="https://imgfz.com/i/XbLD5ue.png"
+           VerticalOptions="Center"
+           HorizontalOptions="Start"
+           WidthRequest="20"
+           HeightRequest="20" 
+           Margin="10,0,0,0"/>
+
+                    <Entry Placeholder="Email"
+               Keyboard="Email"
+               TextColor="Black"
+               PlaceholderColor="Black"
+               HeightRequest="50"
+               Margin="30,0,0,0"/>
+
+                </Grid>
+            </Frame>
+
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black"
+               Margin="0,0,0,60">
+
+                <Grid>
+
+                    <Image Source="https://imgfz.com/i/nRaJuh9.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                HeightRequest="20"
+                WidthRequest="20"
+                Margin="10,0,0,0"          />
+
+                    <Entry Placeholder="Contraseña"
+               Keyboard="Email"
+               TextColor="Black"
+               PlaceholderColor="Black"
+               HeightRequest="50"                    
+               Margin="30,0,0,0"
+               
+             
+               />
+
+
+
+                </Grid>
+
+
+
+            </Frame>
+
+            <Button
+            Margin="0,-40,0,50"
+            Padding="70,0,70,0"
+            HorizontalOptions="Center"
+            Text="Iniciar Sesión"
+            BackgroundColor="#576b43"
+            Clicked="Iniciar_Sesion"/>
+
+
+            <Label Text="¿Olvidaste tu contraseña?"
+               TextDecorations="Underline"
+               HorizontalTextAlignment="Center"
+               Margin="0,-50,0,20">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Recuperar_Contraseña"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+
+            <Label Text="Crear cuenta"
+               TextDecorations="Underline"
+               HorizontalTextAlignment="Center"
+               Margin="0,-10,0,10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Crear_Cuenta"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegradorMVVM.Views.DetalleInvernadero"
+             xmlns:vm="clr-namespace:ProyectoIntegradorMVVM.ViewModels"
+             Title="DetalleInvernadero">
+
+    <ContentPage.BindingContext>
+        <vm:DetalleInvernaderoViewModel />
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto">
+                <ImageButton Source="tecla_flecha_izquierda.png" HeightRequest="30" WidthRequest="30" Grid.Column="0" Grid.Row="0"/>
+                <ImageButton Source="navegacion.png" HeightRequest="30" WidthRequest="30" Grid.Column="1" Grid.Row="0" HorizontalOptions="End"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto, Auto" Margin="0,0,0,20">
+                <Label Text="Invernadero I" FontSize="Large" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"/>
+
+                <Label Text="UTS, Obregón" FontSize="Small" TextColor="Gray" Grid.Column="0" Grid.Row="2"/>
+            </Grid>
+            <Frame WidthRequest="240" HeightRequest="240" Padding="0" CornerRadius="35" BorderColor="White" Margin="0,0,0,20">
+                <Image Source="https://i.ibb.co/4RLPd5yh/UTSmapa.png" />
+            </Frame>
+
+            <!-- Climate Data -->
+            <Frame CornerRadius="15" Padding="15" BackgroundColor="#F7F8FA">
+                <Grid ColumnDefinitions="*, *, *">
+                    <VerticalStackLayout>
+                        <Label Text="Viento" FontSize="12" TextColor="Gray" />
+                        <Label Text="5 m/s" FontSize="16" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="1">
+                        <Label Text="Húmedad" FontSize="12" TextColor="Gray" />
+                        <Label Text="20 %" FontSize="16" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Grid.Column="2">
+                        <Label Text="Plantas" FontSize="12" TextColor="Gray" />
+                        <Label Text="Tomates" FontSize="16" FontAttributes="Bold" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+            <!-- Smart Greenhouse Controls -->
+            <Label Text="Controles" FontSize="18" FontAttributes="Bold" Margin="0,10" />
+
+            <Grid ColumnDefinitions="*, *" RowDefinitions="Auto, Auto">
+                <!-- Lighting -->
+                <Frame CornerRadius="15" Padding="15" BackgroundColor="#153D2B" Grid.Row="0" Grid.Column="0" HeightRequest="150" Margin="10,0,10,0">
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto" VerticalOptions="End">
+                        <Image Source="bombillaencendida.png" Grid.Column="0" Grid.Row="0" HeightRequest="50" WidthRequest="50" HorizontalOptions="Start"/>
+                        <Switch IsToggled="True" Grid.Column="1" Grid.Row="0"/>
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="0,20,0,0">
+                            <Label Text="Lighting" TextColor="White" FontSize="14" />
+                            <Label Text="12 Watt" TextColor="White" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Temperature -->
+                <Frame CornerRadius="15" Padding="10" BackgroundColor="#F7F8FA" Grid.Row="0" Grid.Column="1" HeightRequest="150" Margin="10,0,10,0">
+                    <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto" VerticalOptions="End">
+                        <Image Source="termometroencendido.png" Grid.Column="0" Grid.Row="0" HeightRequest="50" WidthRequest="40"/>
+                        <Switch IsToggled="False" Grid.Column="1" Grid.Row="0"/>
+                        <VerticalStackLayout Grid.Column="0" Grid.Row="1" Margin="0,20,0,0">
+                            <Label Text="Temperature" FontSize="14" />
+                            <Label Text="24°C" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Watering -->
+                <Frame CornerRadius="15" Padding="10" BackgroundColor="#F7F8FA" Grid.Row="1" Grid.Column="0" HeightRequest="150" Margin="10,10,10,0">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <VerticalStackLayout>
+                            <Label Text="Watering" FontSize="14" />
+                            <Label Text="200 ml" FontSize="12" />
+                        </VerticalStackLayout>
+                        <Switch IsToggled="False" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+
+                <!-- Ventilation -->
+                <Frame CornerRadius="15" Padding="10" BackgroundColor="#F7F8FA" Grid.Row="1" Grid.Column="1" HeightRequest="150" Margin="10,10,10,0">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <VerticalStackLayout>
+                            <Label Text="Ventilation" FontSize="14" />
+                            <Label Text="10 m/s" FontSize="12" />
+                        </VerticalStackLayout>
+                        <Switch IsToggled="False" Grid.Column="1" />
+                    </Grid>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

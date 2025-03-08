@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoIntegradorMVVM.Views.CrearCuenta"
+             xmlns:vm="clr-namespace:ProyectoIntegradorMVVM.ViewModels"
+             Title="CrearCuenta">
+
+    <ContentPage.BindingContext>
+        <vm:CrearCuentaViewModel />
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+
+
+            <Frame BackgroundColor="#576b43"
+               
+        HeightRequest="310"
+        CornerRadius="45"
+        Margin="-2,-50,-2,15"
+        Padding="0"
+         HorizontalOptions="Fill">
+
+                <StackLayout>
+
+                    <Label Text="Vamos!"
+                       TextColor="White"
+                       FontSize="40"
+                       Margin="45,50,0,0"/>
+                    <Label Text="Crea"
+                TextColor="White"
+                       FontAttributes="Bold"
+                FontSize="40"
+                Margin="45,-10,0,0"/>
+                    <Label Text="tu"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="40"
+                Margin="45,-10,0,0"/>
+                    <Label Text="cuenta"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="40"
+                Margin="45,-10,0,0"/>
+
+
+
+
+                </StackLayout>
+
+            </Frame>
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black"
+               Margin="15,0,15,10">
+                <Grid>
+                    <Image Source="https://imgfz.com/i/XbLD5ue.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                WidthRequest="20"
+                HeightRequest="20" 
+                Margin="10,0,0,0"/>
+
+                    <Entry Placeholder="Nombre completo"
+                       PlaceholderColor="Black"
+                       Keyboard="Text"
+                       HeightRequest="50"
+                       Margin="30,0,0,0"/>
+                </Grid>
+            </Frame>
+
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black"
+               Margin="15,0,15,10">
+                <Grid>
+                    <Image Source="https://imgfz.com/i/VlRLZru.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                WidthRequest="20"
+                HeightRequest="20" 
+                Margin="10,0,0,0"/>
+
+                    <Entry Placeholder="Email"
+                PlaceholderColor="Black"
+                Keyboard="Text"
+                HeightRequest="50"
+                Margin="30,0,0,0"/>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black"
+               Margin="15,0,15,10">
+                <Grid>
+                    <Image Source="https://imgfz.com/i/nRaJuh9.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                WidthRequest="20"
+                HeightRequest="20" 
+                Margin="10,0,0,0"/>
+
+                    <Entry Placeholder="Contraseña"
+                PlaceholderColor="Black"
+                Keyboard="Text"
+                HeightRequest="50"
+                Margin="30,0,0,0"/>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="10"
+               CornerRadius="50"
+               BorderColor="Black"
+               Margin="15,0,15,10">
+                <Grid>
+                    <Image Source="https://imgfz.com/i/nRaJuh9.png"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                WidthRequest="20"
+                HeightRequest="20" 
+                Margin="10,0,0,0"/>
+
+                    <Entry Placeholder="Confirmar contraseña"
+                PlaceholderColor="Black"
+                Keyboard="Text"
+                HeightRequest="50"
+                Margin="30,0,0,0"/>
+                </Grid>
+            </Frame>
+
+
+
+
+            <Button Text="          Registrarse         " 
+                BackgroundColor="#576b43" 
+                TextColor="White" 
+                FontAttributes="Bold" 
+                CornerRadius="50"
+                HorizontalOptions="Center"
+                BorderColor="White"
+                HeightRequest="60"
+                Margin="0,10,0,40"
+                Clicked="Ir_PantallaPrincipal"/>
+
+            <Label Text="¿Ya tienes una cuenta?"
+            Margin="145,0,0,0"
+               FontSize="10"/>
+
+            <Label Text="Iniciar Sesión"
+                    Margin="265,-15.69,0,0"
+                    FontSize="10"
+                    FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Loginn"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
