@@ -27,7 +27,7 @@ namespace ProyectoIntegradorMVVM.ViewModels
                 }
             }
         }
-
+        
         public string NombrePlanta
         {
             get => nombrePlanta;

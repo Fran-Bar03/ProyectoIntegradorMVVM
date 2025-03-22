@@ -8,7 +8,7 @@
 
 
 
-            <Image Source="https://imgfz.com/i/UwYnG3r.png" HeightRequest="200" Margin="0,0,0,5"/>
+            <Image Source="https://imgfz.com/i/O2nhgkQ.png" HeightRequest="190" Margin="0,0,0,5"/>
 
             <Label Text="Invernadero"
               FontSize="50" 
@@ -29,7 +29,7 @@
                CornerRadius="50"
                BorderColor="Black">
                 <Grid>
-                    <Image Source="https://imgfz.com/i/XbLD5ue.png"
+                    <Image Source="https://imgfz.com/i/zMSsZva.png"
            VerticalOptions="Center"
            HorizontalOptions="Start"
            WidthRequest="20"
@@ -54,7 +54,7 @@
 
                 <Grid>
 
-                    <Image Source="https://imgfz.com/i/nRaJuh9.png"
+                    <Image Source="https://imgfz.com/i/KvAxOWP.png"
                 VerticalOptions="Center"
                 HorizontalOptions="Start"
                 HeightRequest="20"
